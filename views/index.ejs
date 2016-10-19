@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>My First Express App</title>
+    </head>
+    <body>
+      <img src=" <%= picture %> " alt=" <%= picture %> "></img>
+      <!-- script used to loop through the names and have them displayed as an individual tag. -->
+      <h2><p>Hi! My name is <%= studentFirstName %> <%= studentLastName %>.
+             I live in <%= studentLocationCity %>, <%= studentLocationState %>
+             and I'm a <%= studentOccupation %></p>
+      </h2>
+      <h3>My skills are:</h3>
+      <ul>
+        <% studentSkills.forEach(function(skill) { %>
+          <li> <%= skill %> </li>
+        <% }) %>
+      </ul>
+      <h3> My hobbies are: </h3>
+      <ul>
+          <% studentHobbies.forEach(function(hobby){ %>
+            <li> <%= hobby %> </li>
+          <% }) %>
+      </ul>
+    </body>
+</html>
