@@ -15,6 +15,8 @@ app.set('views', path.join(__dirname, 'views'));
                 //path.join will evaluate to a string of the path address you are trying to pass.
 //app.set('view engine', 'ejs'); Not required, express takes care of including this module.
 
+app.use(express.static('css'));
+
 // Add a route to our app that renders our index view
 app.get('/', function(req, res, next) {
   ghAvatar('dorianpenaloza').then(avatar => {
